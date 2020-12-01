@@ -27,7 +27,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
+	{ "Gimp",     NULL,       NULL,       1 << 5,       0,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 1,       0,           -1 },
 	{ "Signal",   NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Telegram",  NULL,       NULL,      1 << 8,       0,           -1 },
@@ -36,7 +36,7 @@ static const Rule rules[] = {
 	{ "Slack",  NULL,       NULL,         1 << 3,       0,           -1 },
 	{ "Notable",  NULL,       NULL,       1 << 3,       0,           -1 },
 	{ "Postman",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "Tresorit",  NULL,       NULL,       1 << 4,       0,           -1 },
+	{ "Tresorit",  NULL,       NULL,      1 << 4,       0,           -1 },
 	{ "Zoom",  NULL,          NULL,       1 << 4,       0,           -1 },
 	{ NULL,  NULL,            "Timeular", 1 << 6,       0,           -1 },
 };
@@ -108,6 +108,15 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+    TAGKEYS(                        XK_KP_End,                    0)
+	TAGKEYS(                        XK_KP_Down,                   1)
+	TAGKEYS(                        XK_KP_Page_Down,              2)
+	TAGKEYS(                        XK_KP_Left,                   3)
+	TAGKEYS(                        XK_KP_Begin,                  4)
+	TAGKEYS(                        XK_KP_Right,                  5)
+	TAGKEYS(                        XK_KP_Home,                   6)
+	TAGKEYS(                        XK_KP_Up,                     7)
+	TAGKEYS(                        XK_KP_Page_Up,                8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
